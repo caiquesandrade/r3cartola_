@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+        <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Laravel</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{{ asset('js/times.js') }}"></script>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -30,9 +31,16 @@
     </head>
     <body>
         <p>Busque seu time aqui !</p>
-        <form>
-            <input type="text"/>
-            <button type="submit" >Buscar</button>
-        </form>
-    </body>
+
+
+            <input type="text" id="pesquisar-time"/>
+            <input type="submit" id="btn-buscar" value="Buscar aquI"/>
+
+
+
+
+
+</body>
 </html>
+
+

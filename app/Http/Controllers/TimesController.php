@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Http\Request;
 
 class TimesController extends Controller
@@ -34,7 +35,6 @@ class TimesController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -80,5 +80,10 @@ class TimesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function buscarTIme (Request $request)
+    {
+        dd($request->get('pesquisar-time'));
     }
 }
