@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         <head>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
@@ -30,14 +31,14 @@
         </style>
     </head>
     <body>
-        <p>Busque seu time aqui !</p>
 
+        <h1>Busque seu time aqui !</h1>
+        <form method="POST" action="{{ route('buscartime') }}">
+            @csrf
+            <input type="text" name="name" placeholder="Nome do Time">
 
-            <input type="text" id="pesquisar-time"/>
-            <input type="submit" id="btn-buscar" value="Buscar aquI"/>
-
-
-
+            <button id="btn-buscar" type="submit">Enviar</button>
+        </form>
 
 
 </body>

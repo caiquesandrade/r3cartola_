@@ -11,8 +11,11 @@
 |
 */
 
-use App\Http\Controllers\TimesController;
 use Illuminate\Support\Facades\Route;
 
-Route::resource('/', 'TimesController');
-Route::get('/pesquisar-time', 'TimesController@buscarTIme');
+Route::group(['prefix' => '/'], function () {
+    Route::get('/', 'TimesController@index')->name('index');
+    Route::post('/buscartime', 'TimesController@buscarTime')->name('buscartime');
+
+});
+

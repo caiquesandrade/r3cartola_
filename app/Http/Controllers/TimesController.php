@@ -82,8 +82,8 @@ class TimesController extends Controller
         //
     }
 
-    public function buscarTIme (Request $request)
+    public function buscarTime(Request $request)
     {
-        dd($request->get('pesquisar-time'));
+        print_r($request->all('name'));
     }
 }
