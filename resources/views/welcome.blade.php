@@ -33,11 +33,13 @@
     <body>
 
         <h1>Busque seu time aqui !</h1>
-        <form method="POST" action="{{ route('buscartime') }}">
-            @csrf
+        <form method="GET" action="{{ route('buscartime') }}">
+
             <input type="text" name="name" placeholder="Nome do Time">
 
             <button id="btn-buscar" type="submit">Enviar</button>
+
+
         </form>
 
 

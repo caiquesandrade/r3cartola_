@@ -84,6 +84,11 @@ class TimesController extends Controller
 
     public function buscarTime(Request $request)
     {
-        print_r($request->all('name'));
+        $client = new \GuzzleHttp\Client();
+        $time = $request->name;
+
+        $response = $client->request('GET', 'https://api.cartolafc.globo.com/times?q='.$time);
+        return $response->getBody();
+
     }
 }
