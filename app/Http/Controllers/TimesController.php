@@ -14,7 +14,15 @@ class TimesController extends Controller
      */
     public function index()
     {
+        return view('welcome');
+    }
+    public function login()
+    {
         return view('login');
+    }
+    public function pesquisaTime()
+    {
+        return view('pesquisaTime');
     }
 
     /**
@@ -82,13 +90,19 @@ class TimesController extends Controller
         //
     }
 
+    public function criarLogin()
+    {
+        return view('criarLogin');
+    }
+
     public function buscarTime(Request $request)
     {
         $client = new \GuzzleHttp\Client();
         $time = $request->name;
 
         $response = $client->request('GET', 'https://api.cartolafc.globo.com/times?q='.$time);
-        return $response->getBody();
+        $time = $response->getBody();
+        return $time;
 
     }
 }

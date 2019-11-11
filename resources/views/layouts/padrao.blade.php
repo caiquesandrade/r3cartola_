@@ -20,7 +20,7 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-color fixed-top">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('index')}}">
                 <img class="starting-logo default-logo" alt="R3Cartola" src="/img/r3cartola-logo-2x.png" width="100px">
             </a>
             <button class="navbar-toggler" id="btn-bar" data-target="#navbarNav" data-toggle="collapse">
@@ -36,12 +36,12 @@
                     </a>
                 </li>
                <li class="nav-item" >
-                    <a class="nav-link" href="#" style="margin-left: 20em;">
+                    <a class="nav-link" href="{{route('login')}}" style="margin-left: 20em;">
                         Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('criarLogin')}}">
                         Criar conta
                     </a>
                 </li>
