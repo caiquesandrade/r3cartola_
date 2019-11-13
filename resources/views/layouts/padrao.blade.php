@@ -82,7 +82,7 @@
                   </div>
                 </div>
                 <div class="container fonte-size">
-                        Copyright (c) 2019 @R3Cartola | R3Cartola
+                        Copyright (c) 2019 @R3Sports | R3Cartola
                     </div>
               </footer>
 
