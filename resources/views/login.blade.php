@@ -13,7 +13,7 @@
                   </div>
 
                   <!-- Login Form -->
-                  <form>
+                  <form method="GET" action="{{ route('pesquisaTime') }}">
                     <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
                     <input type="text" id="senha" class="fadeIn third" name="login" placeholder="senha">
                     <input type="submit" class="fadeIn fourth" value="entrar">

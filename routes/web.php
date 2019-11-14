@@ -19,7 +19,8 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/pesquisatime', 'TimesController@pesquisaTime')->name('pesquisaTime');
     Route::get('/buscartime', 'TimesController@buscarTime')->name('buscarTime');
     Route::get('/criar-login', 'TimesController@criarLogin')->name('criarLogin');
-    Route::post('/criar-login', 'TimesController@criarLogin')->name('criarLogin');
+    Route::post('/criar-login', 'TimesController@store')->name('criarLogin.store');
 
 });
+
 

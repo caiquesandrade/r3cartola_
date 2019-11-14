@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Usuario;
 use Illuminate\Http\Request;
 
 class TimesController extends Controller
@@ -32,7 +33,7 @@ class TimesController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -43,6 +44,15 @@ class TimesController extends Controller
      */
     public function store(Request $request)
     {
+        $usuario = new Usuario;
+        $usuario->nome        = $request->nome;
+        $usuario->celular   = $request->celular;
+        $usuario->email    = $request->email;
+        $usuario->cpf       = $request->cpf;
+        $usuario->password  =   $request->password;
+        $usuario->save();
+
+        return redirect()->route('login')->with('alert-success', 'Seu cadastro foi realizado com sucesso !');
     }
 
     /**
@@ -87,7 +97,9 @@ class TimesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->delete();
+        return redirect()->route('welcome.index')->with('alert-success','Usuário deletado com sucesso !');
     }
 
     public function criarLogin()

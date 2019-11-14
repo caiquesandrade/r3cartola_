@@ -5,7 +5,7 @@
 <div>
 <h1>Busque seu time aqui !</h1>
 
-<form method="GET" action="{{ route('buscartime') }}">
+<form method="GET" action="{{ route('buscarTime') }}">
 
     <input type="text" name="name" placeholder="Nome do Time">
 
